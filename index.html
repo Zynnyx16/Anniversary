@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Passcode Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 500px; /* Set width to 500px */
+            height: 300px; /* Set height to 300px */
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="Brainstorm.jpg" alt="Brainstorm Image">
+    </div>
+    <div class="container">
+        <h2>Enter Our Passcode</h2>
+        <input type="password" id="passcode" placeholder="Enter Passcode">
+        <br>
+        <button onclick="checkPasscode()">Enter</button>
+        <p id="error" style="color: red; display: none;">SALA! SUMABAGON TAKA KARUN! LIWATA!</p>
+    </div>
+
+    <script>
+        function checkPasscode() {
+            var passcode = document.getElementById("passcode").value;
+            var correctPasscode = "030123"; // Change this to your desired passcode
+            var homePasscode = "03012023"; // Additional passcode for homepage redirect
+            
+            if (passcode === correctPasscode || passcode === homePasscode) {
+                window.location.href = "homepage.html"; // Redirect to homepage
+            } else {
+                document.getElementById("error").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song For You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #FFC0CB; /* Powder Pink */
+            background-image: url('hearts-pattern.png'); /* Small hearts all over */
+            background-repeat: repeat;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .music-image {
+            margin-top: 20px;
+            width: 250px;
+            height: 400px;
+            background: url('music.png') no-repeat center center;
+            background-size: cover;
+        }
+        .music-audio {
+            margin-top: 20px;
+        }
+        .lyrics {
+            margin-top: 20px;
+            font-size: 18px;
+            white-space: pre-line;
+            max-width: 600px;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .home-button:hover {
+            background-color: #d43f5e;
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='homepage.html'">Home</button>
+
+    <h1>Song For You</h1>
+    <h2>Chances by Backstreet Boys</h2>
+    <div class="music-image"></div>
+    <audio class="music-audio" controls>
+        <source src="Chances.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="lyrics">
+        <p>
+What if I'd never run into you?
+What if you'd never smiled at me?
+What if I hadn't noticed you too?
+And you'd never showed up where I happened to be
+<br>What's a girl like you doing in a place like this?
+On a quiet night, what are the odds?
+What's a guy like me doing in a place like this?
+I could have just walked by, who would've thought?
+<br>What are the chances that we'd end up dancing?
+Like two in a million, like once in a life
+I could have found you, put my arms around you
+Like two in a million, like once in a life
+What are the chances?
+<br>What if I hadn't asked for your name?
+And time hadn't stopped when you said it to me?
+Of all of the plans that I could've made
+Of all of the nights that I couldn't sleep
+<br>What's a girl like you doing in a place like this?
+In a crowded room, what are the odds?
+What's a guy like me doing in a place like this?
+Getting close to you, but here we are
+<br>What are the chances that we'd end up dancing?
+Like two in a million, like once in a life
+I could have found you, put my arms around you
+Like two in a million, like once in a life
+<br>What are the chances?
+Is it love? Is it fate?
+Who am I? Who's to say?
+Don't know exactly what it means
+<br>Is it love? Is it fate?
+Where it leads, who can say?
+Maybe you and I were meant to be
+What are the chances that we'd end up dancing?
+Two in a million, once in a life
+That I could have found you
+Put my arms around you (my arms around you)
+<br>Two in a million, like once in a life, yeah
+What are the chances?
+Two in a million, once in a life
+What are the chances?
+Two in a million, once in a life
+What if I'd never run into you?
+And what if you'd never smiled at me?
+        </p>
+    </div>
+</body>
+</html>

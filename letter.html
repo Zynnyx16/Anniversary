@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        body {
+            background-color: #f7d6e0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow-x: hidden;
+            flex-direction: column;
+        }
+
+        .heart {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
+        }
+
+        .letter {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .home-button:hover {
+            background-color: #d43f5e;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="home-button" onclick="window.location.href='homepage.html'">Home</button>
+
+    <div class="letter">
+        <h2>My Love Letter</h2>
+        <br><br><p>Dear Love,</p>
+        <br><p>Happy 2nd Anniversary! 💖</p>
+        <br><p>Two years ago, we met in an unexpected time and place, and yet, </p>
+        <p>from the very moment we crossed paths, I just knew. </p>
+        <p>There was something about you that felt like home, </p>
+        <p>like I had waited for this moment, even if I didn’t know it yet.</p>
+        <p>And now, as I look back on everything we’ve shared, I can confidently </p>
+        <p>say that it was no coincidence. You are exactly who I was meant to find. </p>
+        <br><p>Loving you has been the most effortless yet extraordinary thing. </p>
+        <p>Even with the distance that sometimes separates us, </p>
+        <p>my heart has never felt closer to yours. </p>
+        <p>You, my love, have shown me what it means to love without limits, </p>
+        <p>to trust without fear, and to find home in a person rather than a place.</p>
+        <br><p>Being with a seafarer like you is not always easy, but loving you? </p>
+        <p>That’s the easiest thing in the world. No amount of distance can </p>
+        <p>change the way I feel about you. Every time you sail away, </p>
+        <p>I count down the days until you return to me, </p>
+        <p>knowing that no ocean is too vast to keep our hearts apart. </p>
+        <p>Distance only makes our love grow stronger, </p>
+        <p>and every homecoming reminds me just how much I cherish you.</p>
+        <br><p>Thank you for your patience, even when I can be difficult. </p>
+        <p>I know there are times when I complain or say things that </p>
+        <p>might have hurt you, and for that, I am truly sorry. </p>
+        <p>But even in those moments, one thing is certain—I will stay. </p>
+        <p>No matter what, I will always choose you.</p>
+        <br><p>From our simplest dates to our biggest dreams, </p> 
+        <p>I treasure every piece of our journey. </p>
+        <p>I love the way we lift each other up, </p>
+        <p>push each other to grow, and still find ways </p>
+        <p>to make each other laugh like crazy. </p>
+        <br><p>You are my safe harbor, my greatest adventure, and my forever love.</p>
+        <p>As we celebrate this special day, </p>
+        <p>I just want you to know that no matter where life takes us, </p>
+        <p>I will always choose you. </p>
+        <br><p>Through calm seas and raging storms, in laughter and in silence, </p>
+        <p>in every version of our love story—I am yours, always.</p>
+        <br><p>Happy anniversary, my love! </p>
+        <br><p>Here’s to many more years of love, laughter, and endless adventures. 💙🌊</p>
+        <br><br><p>Forever and always,</p>
+        <br><p><strong>Zynnyx</strong></p>
+    </div>
+
+    <script>
+        function createHearts() {
+            for (let i = 0; i < 50; i++) {
+                let heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = Math.random() * 100 + 'vh';
+                heart.style.transform = `scale(${Math.random() * 1.2})`;
+                document.body.appendChild(heart);
+            }
+        }
+        createHearts();
+    </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories</title>
+
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFC0CB; /* Powder Pink */
+            text-align: center;
+            padding: 20px;
+        }
+        .top-container {
+            margin: 20px auto;
+            width: 60%;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .memory-container {
+            margin: 20px auto;
+            width: 60%;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title-container {
+            padding: 10px;
+            font-weight: bold;
+            background: #FFD1DC;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .title-container:hover {
+            background: #D87093;
+            color: white;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .image-container img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 70%;
+            height: 70%;
+            overflow: auto;
+        }
+        .popup img {
+            width: 200px;
+            height: 350px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin: 5px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .home-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .home-button:hover {
+            background-color: #d43f5e;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="home-button" onclick="window.location.href='homepage.html'">Home</button>
+
+    <h1>Click the buttons for Our Memories</h1>
+
+    <div class="top-container">
+        <a href="https://drive.google.com/file/d/1sJeRBlAenKj3KXeuTnr5h_5iO1CrVizt/view?usp=drive_link">Click here for our memories</a>
+    </div>
+    
+    <div class="memory-container">
+        <button class="title-container" onclick="showPopup('popup1')">The Day We Met</button>
+        <div class="image-container">
+            <img src="meet2.PNG" alt="Memory 1">
+            <img src="meet3.PNG" alt="Memory 2">
+            <img src="meet4.PNG" alt="Memory 3">
+            <img src="Meet1.jpg" alt="Memory 4">
+        </div>
+    </div>
+ 
+    <div class="memory-container">
+        <button class="title-container" onclick="showPopup('popup2')">Flowers You Gave Me</button>
+        <div class="image-container">
+            <img src="flower1.jpg" alt="Flower 1">
+            <img src="flower2.jpg" alt="Flower 2">
+            <img src="flowers1.PNG" alt="Flower 3">
+            <img src="flowers2.PNG" alt="Flower 4">
+            
+        </div>
+    </div>
+
+    <div class="memory-container">
+        <button class="title-container" onclick="showPopup('popup3')">LDR Moments</button>
+        <div class="image-container">
+            <img src="ldr1.PNG" alt="LDR 1">
+            <img src="ldr2.PNG" alt="LDR 2">
+            <img src="ldr3.jpg" alt="LDR 3">
+            <img src="ldr4.PNG" alt="LDR 4">
+         
+        </div>
+    </div>
+
+    <div class="memory-container">
+        <button class="title-container" onclick="showPopup('popup5')">Moments Together</button>
+        <div class="image-container">
+            <img src="us1.PNG" alt="Moments 1">
+            <img src="us2.PNG" alt="Moments 2">
+            <img src="yes1.JPG" alt="Moments 6">
+            <img src="yes2.JPG" alt="Moments 7">
+        </div>
+    </div>
+
+    <div class="memory-container">
+        <button class="title-container" onclick="showPopup('popup4')">Our Babies</button>
+        <div class="image-container">
+            <img src="baby1.PNG" alt="Baby 1">
+            <img src="baby3.PNG" alt="Baby 2">
+            <img src="baby2.PNG" alt="Baby 3">
+            <img src="baby4.PNG" alt="Baby 4">
+        </div>
+    </div>
+
+    <div id="popup1" class="popup">
+        <button class="close-btn" onclick="hidePopup('popup1')">X</button>
+        <img src="meet2.PNG" alt="Memory 1">
+        <img src="meet3.PNG" alt="Memory 2">
+        <img src="meet4.PNG" alt="Memory 3">
+        <img src="Meet1.jpg" alt="Memory 4">
+    </div>
+    <div id="popup2" class="popup">
+        <button class="close-btn" onclick="hidePopup('popup2')">X</button>
+        <img src="flowers1.PNG" alt="Flower 1">
+        <img src="flowers2.PNG" alt="Flower 2">
+        <img src="flower1.jpg" alt="Flower 10">
+        <img src="flower2.jpg" alt="Flower 11">
+    </div>
+    <div id="popup3" class="popup">
+        <button class="close-btn" onclick="hidePopup('popup3')">X</button>
+        <img src="ldr1.PNG" alt="LDR 1">
+        <img src="ldr2.PNG" alt="LDR 2">
+        <img src="ldr3.jpg" alt="LDR 3">
+        <img src="ldr4.PNG" alt="LDR 4">
+
+    </div>
+  
+    <div id="popup4" class="popup">
+        <button class="close-btn" onclick="hidePopup('popup4')">X</button>
+        <img src="baby1.PNG" alt="Baby 1">
+        <img src="baby2.PNG" alt="Baby 2">
+        <img src="baby3.PNG" alt="Baby 3">
+        <img src="baby4.PNG" alt="Baby 4">
+  
+
+    </div>
+
+    <div id="popup5" class="popup">
+        <button class="close-btn" onclick="hidePopup('popup5')">X</button>
+        <img src="yes1.JPG" alt="Together 1">
+        <img src="yes2.JPG" alt="Together 2">
+        <img src="us1.PNG" alt="Together 4">
+        <img src="us2.PNG" alt="Together 5">
+
+    </div>
+    <script>
+        function showPopup(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+        function hidePopup(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
